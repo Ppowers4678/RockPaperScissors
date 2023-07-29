@@ -1,0 +1,89 @@
+body {
+    background-color:slateblue;
+    height: 100vh;
+}
+button {
+    height: 80px;
+    position:relative;
+    font-size:20px;
+    background-color: none;
+}
+#Rock {
+    position: relative;
+    left: 128px;
+    bottom: 25px;
+    z-index: 10000;
+    background: rgb(255,0,0,0);
+    border: none;
+    color: black;
+    text-shadow: 0px 4px 4px #000;
+}
+#Paper {
+    position: relative;
+    left: 300px;
+    bottom: 25px;
+    z-index: 10000;
+    background: rgb(255,0,0,0);
+    border: none;
+    color: black;
+    text-shadow: 0px 4px 4px #000;
+}
+#Scissors {
+    position: relative;
+    left: 490px;
+    bottom: 25px;
+    z-index: 10000;
+    background: rgb(255,0,0,0);
+    border: none;
+    color: black;
+    text-shadow: 0px 4px 4px #000;
+}
+#Rock:hover {
+    color:white;
+}
+#Paper:hover {
+    color:white;
+}
+#Scissors:hover {
+    color:white;
+}
+.gameTitle {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 74px;
+color:gold;
+z-index: 1000px;
+position: relative;
+top: 45px;
+z-index: 4;
+
+}
+.paper {
+    height: 180px;
+    width:auto;
+    position:relative;
+    top:65px;
+    right: 150px;
+    z-index: 1;
+}
+.rock {
+    position: relative;
+    top: 40px;
+    right: 200px;
+    z-index:1;
+}
+.scissors {
+    position: relative;
+    z-index: 3;
+    left: 525px;
+    bottom: 175px;
+}
+.pointTracker {
+    position: relative;
+    top: 500px;
+}
+.pointTrackerBox {
+    position: relative;
+    top:450px;
+}
