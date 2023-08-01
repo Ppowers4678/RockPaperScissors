@@ -10,14 +10,17 @@ function randomNum() {
        function choiceForRock() {
               if (randomNum() <= 33) {
                      console.log("Rock!")
-                     alert("Computer Chose Rock! Draw!") }
+                     draws.push("draw")
+                     drawCounter()
+                      }
               else if (randomNum() >= 34 && randomNum()<= 66) {
                      console.log("Paper!")
-                     alert("Computer Chose Paper! You Lose!")}
+                     losses.push("loss")
+                     lossCounter()}
               else { (randomNum()>= 67) 
                      console.log("Scissors!")
-                     alert("Computer Chose Scissors! You Win!")
-              
+                     wins.push("win")
+                     winCounter()
               }}
               rockBtn.addEventListener("click", () => {
                      choiceForRock() 
@@ -27,60 +30,58 @@ function randomNum() {
         function choiceForPaper() {
                  if (randomNum() <= 33) {
                      console.log("Rock!")
-                       alert("Computer Chose Rock! You Win!") }
+                     wins.push("win")
+                     winCounter()}
                   else if (randomNum() >= 34 && randomNum()<= 66) {
                         console.log("Paper!")
-                     alert("Computer Chose Paper! Draw!")}
+                        draws.push("draw")
+                        drawCounter()}
                   else { (randomNum()>= 67) 
                            console.log("Scissors!")
-                         alert("Computer Chose Scissors! You Lose!")
-                     
+                           losses.push("loss")
+                           lossCounter()
                     }}
                     paperBtn.addEventListener("click", () => {
                            choiceForPaper() 
                            }
                     )
+              const losses = []
+              const wins = []
+              const draws = []
          function choiceForScissors() {
-                 if (number <= 33) {
+                 if (randomNum() <= 33) {
                          console.log("Rock!")
-                         alert("Computer Chose Rock! You Lose!")
-                            return "loss" }
-                  else if (number >= 34 && number <= 66) {
+                            losses.push("loss")
+                            lossCounter()}
+                  else if (randomNum() >= 34 && randomNum() <= 66) {
                          console.log("Paper!")
-                      alert("Computer Chose Paper! You Win!")
-                            return "win" }
-                  else { (number>= 67) 
+                            wins.push("win")
+                            winCounter() }
+                  else { (randomNum()>= 67) 
                           console.log("Scissors!")
-                        alert("Computer Chose Scissors! Draw!")
-                        return "draw"
-                     
-                    }}
+                        draws.push("draw")
+                        drawCounter()
+                     }
+              
+              }
                    scissorsBtn.addEventListener("click", () => {
                           choiceForScissors()
-                             if (number <= 33) {
-                                   lossCounter()
-                             } else if (number >= 34 && number<=66) {
-                                   winCounter()
-                             } else {drawCounter() }});
-                           
+                   })
                     
               function lossCounter() {
-                     let losses = document.querySelectorAll("loss")
                      let count = losses.length
-                     console.log(`You have ${count} losses!`)
+                     document.getElementById("losses").innerHTML= `${count}`
                      return count
 
               }
               function winCounter() {
-                     const wins = document.querySelectorAll("win")
                      const count = wins.length
-                     console.log( `You have ${count} wins!`)
-                     return count
+                     document.getElementById("wins").innerHTML= `${count}`
+                     return wins
               }
               function drawCounter() {
-                     const draws = document.querySelectorAll("draw")
                      const count = draws.length
-                     console.log(`You have ${count} draws!`)
+                     document.getElementById("draws").innerHTML= `${count}`
                      return count
               }
  
