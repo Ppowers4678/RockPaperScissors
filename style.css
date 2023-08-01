@@ -1,6 +1,9 @@
+:root {
+    margin:0;
+    padding:0;
+}
 body {
     background-color:slateblue;
-    height: 100vh;
 }
 button {
     height: 80px;
@@ -9,33 +12,33 @@ button {
     background-color: none;
 }
 #Rock {
-    position: relative;
-    left: 128px;
-    bottom: 25px;
+    position: absolute;
+    left: 635px;
+    bottom: 568px;
     z-index: 10000;
     background: rgb(255,0,0,0);
     border: none;
-    color: black;
+    color: gold;
     text-shadow: 0px 4px 4px #000;
 }
 #Paper {
-    position: relative;
-    left: 300px;
-    bottom: 25px;
+    position: absolute;
+    left: 902px;
+    bottom: 568px;
     z-index: 10000;
     background: rgb(255,0,0,0);
     border: none;
-    color: black;
+    color: gold;
     text-shadow: 0px 4px 4px #000;
 }
 #Scissors {
-    position: relative;
-    left: 490px;
-    bottom: 25px;
+    position: absolute;
+    left: 1185px;
+    bottom: 567px;
     z-index: 10000;
     background: rgb(255,0,0,0);
     border: none;
-    color: black;
+    color: gold;
     text-shadow: 0px 4px 4px #000;
 }
 #Rock:hover {
@@ -54,36 +57,114 @@ align-items: center;
 font-size: 74px;
 color:gold;
 z-index: 1000px;
-position: relative;
-top: 45px;
+height: 300px;
 z-index: 4;
 
 }
 .paper {
     height: 180px;
-    width:auto;
-    position:relative;
-    top:65px;
-    right: 150px;
+    width: auto;
+    position: absolute;
+    left: 863px;
     z-index: 1;
 }
 .rock {
-    position: relative;
-    top: 40px;
-    right: 200px;
-    z-index:1;
+    position: absolute;
+    left: 565px;
+    z-index: 1;
 }
 .scissors {
-    position: relative;
+    position: absolute;
+    left: 1035px;
+    bottom: 530px;
     z-index: 3;
-    left: 525px;
-    bottom: 175px;
 }
-.pointTracker {
-    position: relative;
-    top: 500px;
+.counterBox {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 10px;
+    border-style: solid;
+    border-color:gold;
+    height: 80px;
+    font-size: 26px;
+    width: 650px;
+    margin:auto;
+    font-weight: bold;
+    color: gold;
+    font-size: 34px;
+    position: absolute;
+    top: 600px;
+    left: 620px;
 }
-.pointTrackerBox {
-    position: relative;
-    top:450px;
+.wins {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    top: 728px;
+    left: 795px;
+    height: 100px;
+    font-weight: bold;
+    color: gold;
+    font-size: 38px;
+    
+}
+.losses {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    bottom: 172px;
+    left: 1005px;
+    height: 100px;
+    font-weight: bold;
+    color: gold;
+    font-size: 38px;
+}
+.draws {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    top: 728px;
+    left: 900px;
+    height: 100px;
+    font-weight: bold;
+    color: gold;
+    font-size: 38px;
+}
+.winBox {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: gold;
+    position: absolute;
+    left: 780px;
+    top: 685px;
+
+}
+.drawBox {
+    font-size: 30px;
+    font-weight: bold;
+    color: gold;
+    position: absolute;
+    top: 715px;
+    left: 907px;
+}
+.lossBox {
+    font-size: 30px;
+    font-weight: bold;
+    color: gold;
+    position: absolute;
+    top: 715px;
+    left: 1012px;
 }
